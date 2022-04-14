@@ -9,7 +9,7 @@ public class App
     public static void main( String[] args ) throws InterruptedException, ExecutionException
     {
         System.out.println("Enviando mensagem ...");
-        KafkaService.sendMessage("oiii");
+        KafkaService.sendMessage("TEMPERATURA", "34º");
     }
 }
 
