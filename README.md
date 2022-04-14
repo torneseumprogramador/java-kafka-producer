@@ -6,7 +6,7 @@
 
 
 # partitions do Kafka
-<img src="https://atitudereflexiva.files.wordpress.com/2020/03/kafka_partition.png">
+<img src="https://trello.com/1/cards/625890fa16b7da62fc29240c/attachments/625890fd346bf94bbbf9473a/previews/625890fe346bf94bbbf9476d/download/image.png">
 
 # criando projeto
 mvn archetype:generate -DgroupId=br.com.kafka_producer -DartifactId=kafka_producer -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
