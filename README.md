@@ -1,14 +1,31 @@
-# sobre o kafka
+# Sobre o kafka
 - Plataforma de streaming distribuida (é além de um sistema de fila como o rabbitmq)
 - É um banco de dados, armazena os dados (não faz os dados 100% em memória)
 - É super rápido e tem baixa latência
-- 
+- Armazena os dados de forma distribuída entre os seus clusters elencando automaticamente as partições principais em cada cluster
+- Processa mensagens em tempo real
+- Tem por padrão o serviço de pub/sub através dos groupsId
+- Ele não garante a ordem das mensagens (ordem é somente dentro de uma partição, porém em um sistema distribuido, ele recupera de todos as partições)
 
+## Tópicos
+- Grupo de mensagens armazenadas para que um consumidor possa ler
 
-# partitions do Kafka
-https://trello.com/1/cards/625890fa16b7da62fc29240c/attachments/625890fd346bf94bbbf9473a/previews/625890fe346bf94bbbf9476d/download/image.png
+## Brokers
+- Servidores que são utilizados para entrega e consumo das mensagens
 
-# criando projeto
+## partitions
+- Uma fila que armazena as mensagens organizadas por tópicos e armazenada entro de brokers
+- https://trello.com/1/cards/625890fa16b7da62fc29240c/attachments/625890fd346bf94bbbf9473a/previews/625890fe346bf94bbbf9476d/download/image.png
+
+## Producer
+- Sistema que envia as mensagens
+
+## Consumer
+- Sistema que consome as mensagens
+
+<hr>
+
+# Criando projeto
 mvn archetype:generate -DgroupId=br.com.kafka_producer -DartifactId=kafka_producer -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 
 # doc mvn - gerar com manifest
