@@ -1,3 +1,13 @@
+# sobre o kafka
+- Plataforma de streaming distribuida (é além de um sistema de fila como o rabbitmq)
+- É um banco de dados, armazena os dados (não faz os dados 100% em memória)
+- É super rápido e tem baixa latência
+- 
+
+
+# partitions do Kafka
+<img src="https://atitudereflexiva.files.wordpress.com/2020/03/kafka_partition.png">
+
 # criando projeto
 mvn archetype:generate -DgroupId=br.com.kafka_producer -DartifactId=kafka_producer -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 
