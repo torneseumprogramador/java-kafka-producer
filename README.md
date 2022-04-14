@@ -81,8 +81,6 @@ source ~/.bash_profile
 # cria um topico
 ~/kafka_2.13-3.1.0/bin/kafka-topics.sh --create --bootstrap-server=192.168.0.19:9092 --replication-factor=1 --partitions=1 --topic="UM_TOPICO"
 
-~/kafka_2.13-3.1.0/bin/kafka-topics.sh --create --bootstrap-server=192.168.0.19:9092 --replication-factor=3 --partitions=2 --topic="UM_TOPICO" # criando com mais de uma replica e mais de uma partição
-
 # enviando mensagem
 ~/kafka_2.13-3.1.0/bin/kafka-console-producer.sh --broker-list=192.168.0.19:9092 --topic="UM_TOPICO"
 # irá abrir um console para você irá digitar vários valores, exemplo:
@@ -92,6 +90,10 @@ source ~/.bash_profile
 # consumingo mensagems
 ~/kafka_2.13-3.1.0/bin/kafka-console-consumer.sh --bootstrap-server=192.168.0.19:9092 --topic="UM_TOPICO" # consome somente as mesagens novas
 ~/kafka_2.13-3.1.0/bin/kafka-console-consumer.sh --bootstrap-server=192.168.0.19:9092 --topic="UM_TOPICO" --from-beginning # lê mensagens deste o inicio
+
+# deletar mensagem de um tópico
+echo '{ "partitions": [ { "topic": "UM_TOPICO", "partition": 0, "offset": 1 } ],  "version": 1 }' > delete-records.json
+~/kafka_2.13-3.1.0/bin/kafka-delete-records.sh --bootstrap-server 192.168.0.19:9092 --offset-json-file delete-records.json
 
 # deletar um topico
 ~/kafka_2.13-3.1.0/bin/kafka-topics.sh --topic="EXEMPLO_TOPICO" --delete --bootstrap-server=192.168.0.19:9092
