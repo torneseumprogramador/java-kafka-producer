@@ -17,6 +17,7 @@
 
 ## Cluster Kafica
 - Um conjunto de maquinas distribuindo e dando performance a um kafka com balanciamento
+- https://trello.com/1/cards/625890fa16b7da62fc29240c/attachments/625897ab96b90d8cc8571680/previews/625897ac96b90d8cc8571688/download/image.png
 - https://trello.com/1/cards/625890fa16b7da62fc29240c/attachments/6258963548043814e3678fde/previews/6258963748043814e36791cf/download/image.png
 
 ## Brokers
@@ -28,6 +29,10 @@
 ## Partitions
 - Uma fila que armazena as mensagens organizadas por tópicos e armazenada entro de brokers
 - https://trello.com/1/cards/625890fa16b7da62fc29240c/attachments/625890fd346bf94bbbf9473a/previews/625890fe346bf94bbbf9476d/download/image.png
+
+## Replication Factor
+- Define quantas replicas das partições você irá querer em cada Broker
+- https://trello.com/1/cards/625890fa16b7da62fc29240c/attachments/625898768eaded26d17777d8/previews/625898778eaded26d17777e1/download/image.png
 
 ## Offset
 - Posição da mensagem armazenada em uma partição
