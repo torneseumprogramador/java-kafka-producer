@@ -33,6 +33,9 @@
 ## Replication Factor
 - Define quantas replicas das partições você irá querer em cada Broker
 - https://trello.com/1/cards/625890fa16b7da62fc29240c/attachments/625898768eaded26d17777d8/previews/625898778eaded26d17777e1/download/image.png
+- Se deixarmos somente uma replica, caso perca um dos clusters, todas as mensagens daquele cluster serão perdidas
+- Imagem: https://trello.com/1/cards/625890fa16b7da62fc29240c/attachments/62589929d46b7c4ba7bf396d/previews/6258992ad46b7c4ba7bf3983/download/image.png
+- Quem faz este gerencimento é o Zookeeper
 
 ## Offset
 - Posição da mensagem armazenada em uma partição
@@ -77,6 +80,8 @@ source ~/.bash_profile
 
 # cria um topico
 ~/kafka_2.13-3.1.0/bin/kafka-topics.sh --create --bootstrap-server=192.168.0.19:9092 --replication-factor=1 --partitions=1 --topic="UM_TOPICO"
+
+~/kafka_2.13-3.1.0/bin/kafka-topics.sh --create --bootstrap-server=192.168.0.19:9092 --replication-factor=3 --partitions=2 --topic="UM_TOPICO" # criando com mais de uma replica e mais de uma partição
 
 # enviando mensagem
 ~/kafka_2.13-3.1.0/bin/kafka-console-producer.sh --broker-list=192.168.0.19:9092 --topic="UM_TOPICO"
