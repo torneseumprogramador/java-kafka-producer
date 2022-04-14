@@ -5,17 +5,33 @@
 - Armazena os dados de forma distribuída entre os seus clusters elencando automaticamente as partições principais em cada cluster
 - Processa mensagens em tempo real
 - Tem por padrão o serviço de pub/sub através dos groupsId
-- Ele não garante a ordem das mensagens (ordem é somente dentro de uma partição, porém em um sistema distribuido, ele recupera de todos as partições)
+- Ele não garante a ordem das mensagens (ordem é somente dentro de uma partição, porém em um sistema distribuido, ele recupera todas as mensagens de todas as partições, não garantindo a ordem)
 
 ## Tópicos
 - Grupo de mensagens armazenadas para que um consumidor possa ler
+- https://trello.com/1/cards/625890fa16b7da62fc29240c/attachments/625895d3e940241f23e4a4c1/previews/625895d4e940241f23e4af10/download/image.png
+
+## Zookeeper
+- Sistema gerenciador das mensagens em partições por tópicos no Kafka
+- https://trello.com/1/cards/625890fa16b7da62fc29240c/attachments/6258963548043814e3678fde/previews/6258963748043814e36791cf/download/image.png
+
+## Cluster Kafica
+- Um conjunto de maquinas distribuindo e dando performance a um kafka com balanciamento
+- https://trello.com/1/cards/625890fa16b7da62fc29240c/attachments/6258963548043814e3678fde/previews/6258963748043814e36791cf/download/image.png
 
 ## Brokers
-- Servidores que são utilizados para entrega e consumo das mensagens
+- Servidores que são utilizados para armazenar/entrega as mensagens
+- Ele armazena as mensagens em partições diferentes em cada Broker, deixando uma partição em cada Broker diferente
+- https://trello.com/1/cards/625890fa16b7da62fc29240c/attachments/625897ab96b90d8cc8571680/previews/625897ac96b90d8cc8571688/download/image.png
+- https://trello.com/1/cards/625890fa16b7da62fc29240c/attachments/625895d3e940241f23e4a4c1/previews/625895d4e940241f23e4af10/download/image.png
 
-## partitions
+## Partitions
 - Uma fila que armazena as mensagens organizadas por tópicos e armazenada entro de brokers
 - https://trello.com/1/cards/625890fa16b7da62fc29240c/attachments/625890fd346bf94bbbf9473a/previews/625890fe346bf94bbbf9476d/download/image.png
+
+## Offset
+- Posição da mensagem armazenada em uma partição
+- https://trello.com/1/cards/625890fa16b7da62fc29240c/attachments/62589534282a97642aea084d/previews/62589535282a97642aea087c/download/image.png
 
 ## Producer
 - Sistema que envia as mensagens
